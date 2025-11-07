@@ -1,0 +1,369 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', Segoe UI;
+  letter-spacing: 1px;
+}
+
+body {
+  background-color: mintcream;
+  color: #333;
+}
+
+
+header {
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1{
+  font-size: 24px;
+  font-weight: bold;
+  color: gold;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 70px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: gold;
+  padding: 8px;
+  display: block;
+  font-weight: bolder;
+}
+.nav-links a:hover{
+  color: white;
+}
+.active{
+  color: white;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 35px;
+  left: 0;
+  min-width: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content li a {
+  padding: 10px 20px;
+  color: #2c2c3e;
+}
+.dropdown-content li a:hover{
+  color: gold;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: gold;
+}
+
+
+.background_section{
+  background-color: mintcream;
+  
+  
+}
+.background_section .written-content{
+  justify-content: space-between;
+  text-align: center;
+  margin-top: -50%;
+  color: white;
+}
+.background_section .img-box img{
+  width: 100%;
+}
+.background_section .written-content h1{
+  font-weight: bold;
+  font-size: 35px;
+}
+.background_section .written-content p{
+  font-size: 25px;
+}
+
+.about_section{
+  padding: 10%;
+  margin-top: 40%;
+}
+
+.about_section h1{
+  font-size: 34px;
+  font-weight: bold;
+  color: gold;
+  text-align: center;
+}
+.about_section p{
+  color: black;
+  font-size: 18px;
+}
+
+.about_section .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  
+}
+.about_section .img-box{
+  max-height: 20rem;
+  padding: 5%;
+}
+.about_section .img-box img{
+  width: 100%;
+  
+}
+.about_section .content-box{
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 5%;
+}
+.about_section .content-box a{
+  color: blue;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.quick-link{
+  margin-top: 15%;
+  margin-bottom: 5%;
+}
+.quick-link .container .quick-nav{
+  text-align: center;
+  justify-content: space-between;
+  
+}
+.quick-link .container .quick-nav li{
+  position: relative;
+}
+.quick-link .container .quick-nav h1{
+  font-size: 24px;
+  margin: 7%;
+}
+.quick-link .container .quick-nav a{
+  font-size: 20px;
+  color: #222;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.quick-link .container .quick-nav a:hover{
+  color: gold;
+}
+
+.skills_section .container h1{
+  color: gold;
+  text-align: center;
+  font-size: 30px;
+  margin: 5%;
+}
+.skills_section .container .progress-div{
+  justify-content: space-around;
+  text-align: center;
+  margin: 2%;
+}
+.skills_section .container .progress-div progress{
+  width: 20rem;
+  padding: 1.5%;
+}
+.skills_section .container .progress-div p{
+  font-size: 20px;
+  font-weight: bolder;
+}
+ 
+.skills_section .container .written-content{
+  padding: 5%;
+  margin: 2%;
+  box-shadow: 0 5px 20px grey;
+  border-radius: 30px;
+  
+  
+}
+.skills_section .container .written-content strong{
+
+}
+
+.template_section .container h1{
+  color: gold;
+  text-align: center;
+  font-size: 30px;
+  margin: 5%;
+}
+.template_section .container{
+  
+}
+.template_section .container .img-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin: 5%;
+  
+}
+.template_section .container .img-container .img-box{
+  max-width: 100%;
+  box-shadow: 0 5px 20px grey;
+  padding: 5%;
+  margin: 5%;
+  border-radius: 10px;
+  height: 25rem;
+  text-align: center;
+}
+.template_section .container .img-container .img-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+.template_section .container .img-container .img-box p{
+  font-size: 18px;
+}
+.template_section .container .img-container .img-box strong{
+  font-size: 28px;
+}
+.template_section .container .img-container .img-box a img{
+  max-width: 100%;
+  width: 100%;
+}
+.template_section .container .img-container .img-box .click-to-download{
+  background-color: red;
+  width: 15rem;
+  padding: 2%;
+  margin-left: 12%;
+}
+.template_section .container .img-container .img-box .click-to-download a{
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+
+}
+
+.all-temp_section .container .head span{
+  font-size: 34px;
+  color: #222;
+  font-weight: bolder;
+  text-align: center;
+}
+.all-temp_section .container .head{
+  font-weight: bolder;
+  text-align: center;
+  padding: 7%;
+}
+.all-temp_section .container .box{
+  max-width: 100%;
+  margin: 7%;
+  box-shadow: 0 12px 30px grey;
+}
+.all-temp_section .container .box img{
+  width: 100%;
+}
+.all-temp_section .container .img-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.all-temp_section .container .img-container .img-box{
+  max-width: 80%;
+  margin: 7%;
+  box-shadow: 0 12px 30px grey;
+}
+.all-temp_section .container .img-container .img-box img{
+  width: 100%;
+  box-shadow: 0 12px 30px grey;
+
+}
+.all-temp_section .container .written-content{
+  padding: 7%;
+}
+.all-temp_section .container .written-content p{
+  color: red;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.all-temp_section .container .written-content span{
+  color: black;
+}
+
+.footer_section{
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 1%;
+}
+.footer_section a{
+  color: white;
+  font-weight: bolder;
+  font-size: 17px;
+  text-decoration: none;
+}
+.footer_section a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .sidenav {
+    display: none;
+  }
+
+  .sidenav.active {
+    display: flex;
+  }
+}

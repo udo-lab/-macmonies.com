@@ -1,0 +1,203 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #1e1e2f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00c9a7;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2c2c3e;
+  top: 35px;
+  left: 0;
+  min-width: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content li a {
+  padding: 10px 20px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search-bar input {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Side Navigation */
+.sidenav {
+  display: none;
+  flex-direction: column;
+  background-color: #1e1e2f;
+  padding: 20px;
+}
+
+.sidenav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #00c9a7, #92fe9d);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.hero button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  background: #1e1e2f;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Courses Section */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 60px 30px;
+}
+
+.course-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h2 {
+  margin-bottom: 15px;
+}
+
+.course-card p {
+  margin-bottom: 20px;
+}
+
+.course-card a {
+  text-decoration: none;
+  color: #00c9a7;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1e1e2f;
+  color: #aaa;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .sidenav {
+    display: none;
+  }
+
+  .sidenav.active {
+    display: flex;
+  }
+}
